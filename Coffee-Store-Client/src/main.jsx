@@ -7,13 +7,34 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Error from './Components/404 Page/Error';
+import AddCoffee from './Components/AddCoffee';
+import UpdateCoffee from './Components/UpdateCoffee';
+import LayOut from './Components/LayOut';
+import "flowbite";
 
 
 const router = createBrowserRouter([
+
+
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <LayOut></LayOut>,
+    children: [
+      {
+        path: "/",
+        element: <App></App>,
+      },
+      {
+        path: "addCoffee",
+        element: <AddCoffee></AddCoffee>,
+      },
+      {
+        path: "updateCoffee",
+        element: <UpdateCoffee></UpdateCoffee>,
+      },
+    ]
   },
+  
   {
     path: "*",
     element: <Error></Error>,
