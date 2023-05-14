@@ -1,4 +1,5 @@
 import { Button, Label, TextInput } from 'flowbite-react';
+import Swal from 'sweetalert2'
 import React from 'react';
 
 const AddCoffee = () => {
@@ -14,6 +15,25 @@ const AddCoffee = () => {
         const category = form.category.value;
         const newCoffeeDetails = {name, supplier, details, chef, taste, photo, category}
         console.log(newCoffeeDetails);
+
+        fetch('http://localhost:5000/coffee',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(newCoffeeDetails)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success',
+                    text: 'User Added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+
+        })
 
       
         console.log('add coffee')

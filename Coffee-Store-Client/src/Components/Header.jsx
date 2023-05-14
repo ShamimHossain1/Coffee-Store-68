@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div>
+        <div >
             
             <Navbar
+            className='lg:py-10 lg:px-64 bg-slate-200 '
                 fluid={true}
                 rounded={true}
             >
