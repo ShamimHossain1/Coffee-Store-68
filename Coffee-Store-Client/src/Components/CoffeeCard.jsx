@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const CoffeeCard = ({ coffee }) => {
-    const {_id, name, supplier, details, chef, taste, photo, category } = coffee
+    const {_id, name, supplier, details, chef, taste, photo, category } = coffee;
     const handleDelete=(id)=>{
         console.log(id)
         Swal.fire({
@@ -40,8 +40,8 @@ const CoffeeCard = ({ coffee }) => {
     }
     return (
         <div>
-            <div className="max-w-sm">
-                <Card imgSrc={photo}>
+            <div className="max-w-sm ">
+                <Card  imgSrc={photo}>
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         {name}
                     </h5>

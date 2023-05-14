@@ -7,7 +7,7 @@ const Header = () => {
         <div >
             
             <Navbar
-            className='lg:py-10 lg:px-64 bg-slate-200 '
+            className='lg:py-10 lg:flex lg:justify-center bg-slate-200 '
                 fluid={true}
                 rounded={true}
             >
@@ -18,22 +18,14 @@ const Header = () => {
                         href="/"
                         active={true}
                     >
-                        Home
+                       <span className='lg:text-lg'> Home</span>
                     </Navbar.Link>
                     <Navbar.Link
                         
                     >
-                       <Link to='/addCoffee'> Add Coffee</Link>
+                      <Link className='lg:text-lg' to='/addCoffee'> Add Coffee</Link>
                     </Navbar.Link>
-                    <Navbar.Link >
-                       <Link to='/updateCoffee'>Update Coffee</Link>
-                    </Navbar.Link>
-                    <Navbar.Link >
-                        Pricing
-                    </Navbar.Link>
-                    <Navbar.Link >
-                        Contact
-                    </Navbar.Link>
+                    
                 </Navbar.Collapse>
             </Navbar>
             

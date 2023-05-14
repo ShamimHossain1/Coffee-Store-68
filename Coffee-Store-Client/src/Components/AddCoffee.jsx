@@ -40,7 +40,7 @@ const AddCoffee = () => {
     }
     return (
         <div>
-            <h2 className='flex justify-center mt-16'>Add Coffee</h2>
+            <h2 className="text-center text-5xl my-10 font-semibold">Add Coffee</h2>
             <form onSubmit={handleAdd} action="" className=' mt-10'>
                 <div className='flex justify-center gap-5'>
                     <div className="flex flex-col gap-4">
